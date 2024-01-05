@@ -1,3 +1,8 @@
+# Products app
+
+React+Next.js and tailwindCSS project with [dummyJSON API](https://dummyjson.com/docs/products).
+You can see it live [here](https://dummyjson.com/docs/products).
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
