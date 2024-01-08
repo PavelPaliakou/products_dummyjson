@@ -14,9 +14,11 @@ export default async function ProductSection (){
     const data = await getProducts();
 
     return (
-        <section className="flex flex-row gap-4 flex-wrap">
+        <section className="col-span-3 flex flex-row gap-4 flex-wrap">
             {data.products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <a href={product.id}>
+                    <ProductCard key={product.id} product={product} />
+                </a>
             ))}
         </section>
     )

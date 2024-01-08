@@ -3,7 +3,7 @@ import ProductSection from './components/product/productSection'
 
 export default function Home() {
   return (
-    <main className="relative flex flex-row items-center justify-between p-24">
+    <main className="grid grid-cols-4 p-4">
       <SideBar />
       <ProductSection />
     </main>
