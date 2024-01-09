@@ -1,7 +1,7 @@
 "use client";
 
-async function getProduct() {
-    const productData = await fetch('https://dummyjson.com/products/1');
+async function getProduct(id) {
+    const productData = await fetch(`https://dummyjson.com/products/${id}`);
     if(!productData.ok){
         throw new Error('Failed to fetch data')
     }
@@ -9,10 +9,11 @@ async function getProduct() {
     return productData.json();
 }
 
-export default async function ProductCard() {
-    const product = await getProduct();
+export default async function Product() {
+    const id = 1;
+    const product = await getProduct(id);
     return (
-        <div>
+        <div className="flex flex-col items-center w-full">
             <h1>Product</h1>
             <p>Title <span>{product.title}</span></p>
             <p>Description <span>{product.description}</span></p>
