@@ -9,9 +9,10 @@ async function getProduct(id) {
     return productData.json();
 }
 
-export default async function Product() {
-    const id = 1;
-    const product = await getProduct(id);
+export default async function Product({ params }) {
+
+    const product = await getProduct(params.Product);
+    
     return (
         <div className="flex flex-col items-center w-full">
             <h1>Product</h1>
