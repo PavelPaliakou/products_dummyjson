@@ -1,9 +1,7 @@
 import ProductCard from "./productCard";
-import { mock } from "../../mock/allProducts.json"
 
 async function getProducts() {
     const productsData = await fetch('https://dummyjson.com/products');
-    // const productsData = await fetch("../../mock/allProducts.json");
 
     if (!productsData.ok) {
         throw new Error('Failed to fetch data')

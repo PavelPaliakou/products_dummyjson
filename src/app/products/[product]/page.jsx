@@ -1,4 +1,5 @@
 "use client";
+//FIXME:  too many requests 
 
 async function getProduct(id) {
     const productData = await fetch(`https://dummyjson.com/products/${id}`);
