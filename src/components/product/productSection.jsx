@@ -1,24 +1,16 @@
+import Link from "next/link";
 import ProductCard from "./productCard";
-
-async function getProducts() {
-    const productsData = await fetch('https://dummyjson.com/products');
-
-    if (!productsData.ok) {
-        throw new Error('Failed to fetch data')
-    }
-
-    return productsData.json();
-}
+import { getAllProducts } from "@/lib/fetchData";
 
 export default async function ProductSection() {
-    const data = await getProducts();
+    const data = await getAllProducts();
 
     return (
         <section className="col-span-3 flex flex-row gap-4 flex-wrap">
             {data.products.map((product) => (
-                <a href={`/products/${product.id}`}>
+                <Link href={`/product/${product.id}`}>
                     <ProductCard key={product.id} product={product} />
-                </a>
+                </Link>
             ))}
         </section>
     )

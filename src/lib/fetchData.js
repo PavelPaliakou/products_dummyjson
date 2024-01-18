@@ -1,4 +1,4 @@
-export async function getProducts() {
+export async function getAllProducts() {
     const productsData = await fetch('https://dummyjson.com/products');
 
     if (!productsData.ok) {
@@ -18,7 +18,7 @@ export async function getProduct(id) {
     return productData.json();
 }
 
-export async function getCategories() {
+export async function getAllCategories() {
     const categoriesData = await fetch('https://dummyjson.com/products/categories');
     
     if(!categoriesData.ok){
@@ -28,7 +28,7 @@ export async function getCategories() {
     return categoriesData.json();
 }
 
-export async function getCategory(categoryName) {
+export async function getProductsByCategory(categoryName) {
     const categoryData = await fetch(`https://dummyjson.com/products/category/${categoryName}`);
     
     if(!categoryData.ok){
