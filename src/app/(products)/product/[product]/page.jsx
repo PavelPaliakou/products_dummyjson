@@ -1,6 +1,6 @@
 "use client";
-import Carousel from "@/components/carousel";
 import { getProduct } from "@/lib/fetchData";
+import Slider from "@/components/slider";
 
 //FIXME: useEffect for calling once
 
@@ -35,7 +35,7 @@ export default function Product({ params }) {
             <p>rating <span>{product.rating}</span></p>
             <p>stock <span>{product.stock}</span></p>
             <img src={product.images[0]} alt="image" />
-            <Carousel />
+            <Slider />
             <p>Description <span>{product.description}</span></p>
             <p>price <span>{product.price}</span></p>
             <p>discountPercentage <span>{product.discountPercentage}</span></p>
