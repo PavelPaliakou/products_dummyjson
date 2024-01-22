@@ -1,12 +1,12 @@
 "use client";
 import { getProduct } from "@/lib/fetchData";
-import Slider from "@/components/slider";
+import Slider from "@/components/Slider/slider";
 
 //FIXME: useEffect for calling once
 
 export default function Product({ params }) {
-    console.log(params);
-    console.log(params.product);
+    // console.log(params);
+    // console.log(params.product);
 
     const product = {
         id: 1,
@@ -34,14 +34,12 @@ export default function Product({ params }) {
             <p><span>{product.title}</span></p>
             <p>rating <span>{product.rating}</span></p>
             <p>stock <span>{product.stock}</span></p>
-            <img src={product.images[0]} alt="image" />
             <Slider />
             <p>Description <span>{product.description}</span></p>
             <p>price <span>{product.price}</span></p>
             <p>discountPercentage <span>{product.discountPercentage}</span></p>
             <p>brand <span>{product.brand}</span></p>
             <p>category <span>{product.category}</span></p>
-            <img src={product.thumbnail} alt="thumbnail" />
         </div>
     )
 }
