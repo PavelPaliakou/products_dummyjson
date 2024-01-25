@@ -4,7 +4,7 @@ import Slider from "@/components/Slider/slider";
 
 //FIXME: useEffect for calling once
 
-export default function Product({ params }) {
+export default async function Product({ params }) {
     // console.log(params);
     // console.log(params.product);
 
@@ -31,10 +31,13 @@ export default function Product({ params }) {
 
     return (
         <div className="col-span-3 flex flex-col items-center w-full">
-            <p><span>{product.title}</span></p>
-            <p>rating <span>{product.rating}</span></p>
-            <p>stock <span>{product.stock}</span></p>
-            <Slider />
+                <p><span>{product.title}</span></p>
+            <div className="flex flex-row">
+                <p>rating <span>{product.rating}</span></p>
+                <p>|</p>
+                <p>stock <span>{product.stock}</span></p>
+            </div>
+            <Slider images={product.images}/>
             <p>Description <span>{product.description}</span></p>
             <p>price <span>{product.price}</span></p>
             <p>discountPercentage <span>{product.discountPercentage}</span></p>
