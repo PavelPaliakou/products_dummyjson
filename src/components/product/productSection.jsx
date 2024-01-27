@@ -6,9 +6,9 @@ export default async function ProductSection() {
     const data = await getAllProducts();
 
     return (
-        <section className="col-span-3 flex flex-row gap-4 flex-wrap">
+        <section className="col-span-3 flex flex-row flex-wrap">
             {data.products.map((product) => (
-                <Link href={`/product/${product.id}`}>
+                <Link className="w-2/4" href={`/product/${product.id}`}>
                     <ProductCard key={product.id} product={product} />
                 </Link>
             ))}
