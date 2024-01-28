@@ -8,8 +8,8 @@ export default async function ProductSection() {
     return (
         <section className="col-span-3 flex flex-row flex-wrap">
             {data.products.map((product) => (
-                <Link className="w-2/4" href={`/product/${product.id}`}>
-                    <ProductCard key={product.id} product={product} />
+                <Link key={product.id} className="w-2/4" href={`/product/${product.id}`}>
+                    <ProductCard product={product} />
                 </Link>
             ))}
         </section>

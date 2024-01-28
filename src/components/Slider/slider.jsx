@@ -1,3 +1,4 @@
+'use client'
 import SlideRow from "./slideRow"
 import { useState } from "react"
 
