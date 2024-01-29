@@ -1,15 +1,10 @@
-"use client";
+import { getProductsByCategory } from "@/lib/fetchData";
+import ProductSection from "@/components/product/productSection";
 
-//FIXME: useEffect for calling once
+export default async function Category({ params }) {
+    const products = await getProductsByCategory(params.category);
 
-export default function Category({ params }) {
     return (
-        <section className="col-span-3 flex flex-row gap-4 flex-wrap">
-            {data.products.map((product) => (
-                <Link href={`/product/${product.id}`}>
-                    <ProductCard key={product.id} product={product} />
-                </Link>
-            ))}
-        </section>
+        <ProductSection products = {products}/>
     )
 }

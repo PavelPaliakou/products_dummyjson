@@ -1,20 +1,14 @@
 import NavLink from "./navLink"
+import { getAllCategories } from "@/lib/fetchData";
 
-async function getCategories() {
-    const categoriesData = await fetch('https://dummyjson.com/products/categories');
-    if(!categoriesData.ok){
-        throw new Error('Failed to fetch categories')
-    }
-
-    return categoriesData.json();
-}
 
 export default async function CategoriesList (){
-    const categories = await getCategories();
+    const categories = await getAllCategories();
+
     return (
         <>
             {categories.map((category) => (
-                <NavLink key={category} link="/products" linkName={category} />
+                <NavLink key={category} link={`/category/${category}`} linkName={category} />
             ))}
         </>
     )

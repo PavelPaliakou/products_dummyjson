@@ -28,8 +28,8 @@ export async function getAllCategories() {
     return categoriesData.json();
 }
 
-export async function getProductsByCategory(categoryName) {
-    const categoryData = await fetch(`https://dummyjson.com/products/category/${categoryName}`);
+export async function getProductsByCategory(category) {
+    const categoryData = await fetch(`https://dummyjson.com/products/category/${category}`);
     
     if(!categoryData.ok){
         throw new Error('Failed to fetch category')
