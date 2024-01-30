@@ -1,14 +1,21 @@
-import NavLink from "./navLink"
-import { getAllCategories } from "@/lib/fetchData";
+'use client';
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 
-export default async function CategoriesList (){
-    const categories = await getAllCategories();
+export default async function CategoriesList({categories}) {
+    const pathname = usePathname();
 
     return (
         <>
             {categories.map((category) => (
-                <NavLink key={category} link={`/category/${category}`} linkName={category} />
+                <Link
+                    key={category}
+                    className={`px-4 py-2 hover:bg-gray-100 ${pathname === `/category/${category}` ? 'font-bold' : ''}`}
+                    href={`/category/${category}`}>
+                    {category}
+                </Link>
             ))}
         </>
     )
