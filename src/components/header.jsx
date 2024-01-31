@@ -1,5 +1,5 @@
 import SearchBar from "./navigation/search";
-import NavLink from "./navigation/navLink";
+import Link from "next/link";
 
 const links = ["All", "New", "Featured"];
 
@@ -12,13 +12,19 @@ export default function Header() {
                         Logo
                     </p>
                     {links.map((link) => (
-                        <NavLink key={link} link="/products" linkName={link} />
+                        <Link 
+                            key={link} 
+                            className="px-4 py-2 hover:bg-gray-100" 
+                            href="/"
+                        >
+                            {link}
+                        </Link>
                     ))}
                 </div>
                 <SearchBar />
-                <div className="flex flex-row">
+                <div className="flex flex-row gap-4">
                     <a href="#">Card</a>
-                    <a href="#">Log in</a>
+                    <a href="/login">Log in</a>
                 </div>
             </div>
         </header>
