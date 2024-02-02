@@ -4,9 +4,9 @@ import ProductCard from "./productCard";
 export default async function ProductSection({ products }) {
 
     return (
-        <section className="col-span-3 flex flex-row flex-wrap">
+        <section className="col-span-3 flex flex-row flex-wrap gap-4 bg-white">
             {products.products.map((product) => (
-                <Link key={product.id} className="w-2/4" href={`/product/${product.id}`}>
+                <Link key={product.id} className="w-full" href={`/product/${product.id}`}>
                     <ProductCard product={product} />
                 </Link>
             ))}

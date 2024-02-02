@@ -2,7 +2,7 @@
 
 export default function Footer() {
     return (
-        <footer className="flex my-8 mx-auto px-4 text-2xl">
+        <footer className="flex mx-auto px-4 text-2xl">
             <div className="flex flex-row items-center justify-between w-full p-4">
                 <p>&copy; 2023 <a href="https://pavelpaliakou.netlify.app/" target="_blank">Pavel Paliakou</a> </p>
                 <div className="flex flex-row gap-4">

@@ -15,9 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`bg-gray-200 ${inter.className}`}>
         <Header />
-        <main className="grid grid-cols-4 p-4">
+        <main className="max-w-7xl mx-auto grid grid-cols-4 p-4">
           <SideBar />
           {children}
         </main>

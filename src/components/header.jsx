@@ -6,7 +6,7 @@ const links = ["All", "New", "Featured"];
 export default function Header() {
     return (
         <header className="bg-red-400 shadow">
-            <div className="flex flex-row justify-between items-center py-2 px-4">
+            <div className="flex flex-row justify-between items-center py-2 px-4 max-w-7xl mx-auto">
                 <div className="flex flex-row items-center">
                     <p className="text-3xl font-bold tracking-tight text-gray-900">
                         Logo
