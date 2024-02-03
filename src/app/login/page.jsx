@@ -1,10 +1,12 @@
 import LoginWith from "@/components/login/loginWith";
 import Separator from "@/components/login/separator";
-import LoginInput from "./loginInput";
+import LoginInput from "../../components/login/loginInput";
+
+//TODO: Add calc for login height
 
 export default function Login() {
     return (
-            <section className="text-center col-span-3 bg-white">
+            <section className="flex flex-col items-center justify-center bg-white h-screen">
                 <h1 className="text-4xl font-bold m-2">Create an account</h1>
                 <div className="mb-8 mt-4 flex flex-row flex-wrap justify-center gap-16">
                     <span className="flex gap-2">
