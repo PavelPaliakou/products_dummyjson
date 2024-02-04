@@ -14,7 +14,7 @@ export default async function CategoriesList({categories}) {
                     key={category}
                     className={`px-4 py-2 hover:bg-gray-100 ${pathname === `/category/${category}` ? 'font-bold' : ''}`}
                     href={`/${category}`}>
-                    {category}
+                    {category.replaceAll("-"," ")}
                 </Link>
             ))}
         </>

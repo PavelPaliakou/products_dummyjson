@@ -17,7 +17,7 @@ export default async function Product({ params }) {
             <p>price <span>{product.price}</span></p>
             <p>discountPercentage <span>{product.discountPercentage}</span></p>
             <p>brand <span>{product.brand}</span></p>
-            <p>category <span>{product.category}</span></p>
+            <p>category <span>{product.category.replaceAll("-"," ")}</span></p>
         </div>
     )
 }
