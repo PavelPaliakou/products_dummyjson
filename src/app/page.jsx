@@ -7,12 +7,7 @@ export default async function Home() {
 
   return (
     <>
-      <div className='grid grid-cols-4 gap-4'>
-        <SideBar />
-        <div className="col-span-3">
           <ProductSection products={products} />
-        </div>
-      </div>
     </>
   )
 }

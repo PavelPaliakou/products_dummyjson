@@ -6,7 +6,7 @@ export default async function SideBar (){
 
     return (
         <>
-            <div className="flex flex-col items-center p-4 bg-yellow-200">
+            <div className="flex flex-col items-center p-4 w-1/4 bg-yellow-200">
                 <h1 className="text-2xl font-bold">Categories</h1>
                 <CategoriesList categories={categories}/>
             </div>
