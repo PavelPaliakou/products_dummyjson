@@ -38,3 +38,12 @@ export async function getProductsByCategory(category) {
     return categoryData.json();
 }
 
+export async function getSearchResult(searchValue) {
+    const searchData = await fetch(`https://dummyjson.com/products/search?q=${searchValue}`);
+    
+    if(!searchData.ok){
+        throw new Error('Failed to fetch search result')
+    }
+
+    return searchData.json();
+}

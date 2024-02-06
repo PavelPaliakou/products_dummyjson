@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Footer from '../components/footer'
 import Header from '../components/header'
-import SideBar from '@/components/navigation/sideNavBar'
+import SideNavBar from '@/components/navigation/sideNavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={`bg-gray-200 ${inter.className}`}>
         <Header />
         <main className="max-w-7xl mx-auto p-4 flex gap-4">
-          <SideBar />
+          <SideNavBar />
           {children}
         </main>
         <Footer />

@@ -1,7 +1,7 @@
 import CategoriesList from "./categoriesList";
 import { getAllCategories } from '@/lib/fetchData';
 
-export default async function SideBar (){
+export default async function SideNavBar (){
     const categories = await getAllCategories();
 
     return (

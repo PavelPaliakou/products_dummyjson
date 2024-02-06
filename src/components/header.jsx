@@ -1,4 +1,4 @@
-import SearchBar from "./navigation/search";
+import SearchBar from "./navigation/searchBar";
 import Link from "next/link";
 
 export default function Header() {
