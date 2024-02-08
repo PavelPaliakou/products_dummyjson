@@ -9,6 +9,7 @@ export default function Header() {
                     <Link href={"/"}>
                         <img src="./site_logo.svg" width={200} height={200}/>
                     </Link>
+                    <Link href={"/withpages"}>WithPages</Link>
                 </div>
                 <SearchBar />
                 <div className="flex flex-row gap-4">

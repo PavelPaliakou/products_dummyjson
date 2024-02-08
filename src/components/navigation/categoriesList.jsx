@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 
 export default async function CategoriesList({categories}) {
     const pathname = usePathname();
-    console.log(pathname);
 
     return (
         <>

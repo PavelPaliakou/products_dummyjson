@@ -3,6 +3,8 @@
 import Search from "@/app/(products)/search/page";
 import { useRouter, useSearchParams } from "next/navigation";
 
+//TODO: event.preventDefault();??? remove console.logs
+
 export default function SearchBar() {
     const router = useRouter();
     const searchParams = useSearchParams();
