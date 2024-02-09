@@ -3,6 +3,7 @@ import './globals.css'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import SideNavBar from '@/components/navigation/sideNavBar'
+import { Suspense } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,12 +17,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`bg-gray-200 ${inter.className}`}>
-        <Header />
-        <main className="max-w-7xl mx-auto p-4 flex gap-4">
-          <SideNavBar />
-          {children}
-        </main>
-        <Footer />
+        <Suspense>
+          <Header />
+          <main className="max-w-7xl mx-auto p-4 flex gap-4">
+            <SideNavBar />
+            {children}
+          </main>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   )

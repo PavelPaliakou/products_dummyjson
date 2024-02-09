@@ -8,6 +8,16 @@ export async function getAllProducts() {
     return productsData.json();
 }
 
+export async function getProductsPage(limit, skip) {
+    const productsData = await fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`);
+
+    if (!productsData.ok) {
+        throw new Error('Failed to fetch data')
+    }
+
+    return productsData.json();
+}
+
 export async function getProduct(id) {
     const productData = await fetch(`https://dummyjson.com/products/${id}`);
     
